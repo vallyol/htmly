@@ -939,9 +939,9 @@ function get_frontpage()
         // Get the contents and convert it to HTML
         $front->body = MarkdownExtra::defaultTransform(remove_html_comments($content));
     } else {
-        $front->title = 'Welcome';
+        $front->title = i18n('Welcome_title');
         $front->url = site_url() . 'front';
-        $front->body = 'Welcome to our website.';
+        $front->body = i18n('Welcome_text');
     }
 
     return $front;
